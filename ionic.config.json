@@ -1,0 +1,8 @@
+{
+  "name": "inwza",
+  "app_id": "76731c2b",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
