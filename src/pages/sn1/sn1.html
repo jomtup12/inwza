@@ -1,0 +1,117 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title style="text-align:center; color:red ">
+      แบบบันทึกการนับจด สน.1
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top color="primary">
+    <ion-segment [(ngModel)]="sn1">
+      <ion-segment-button value="page1">
+        หน้าที่ 1
+      </ion-segment-button>
+      <ion-segment-button value="page2" [disabled]="!isSec2Enable">
+        หน้าที่ 2
+      </ion-segment-button>
+      <ion-segment-button value="page3" [disabled]="!isSec3Enable">
+        หน้าที่ 3
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col col-11>
+        <div  [ngSwitch]="sn1">
+          
+            <ion-list *ngSwitchCase="'page1'">
+              <sn1-sec1></sn1-sec1>
+            </ion-list>
+         
+          
+            <ion-list *ngSwitchCase="'page2'">
+              <sn1-sec2></sn1-sec2>
+            </ion-list>
+          
+         
+            <ion-list *ngSwitchCase="'page3'">
+              <sn1-sec3></sn1-sec3>
+            </ion-list>
+         
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-grid>
+      <ion-row no-padding no-margin>
+        <ion-col col-3>
+          <button ion-button round (click)="goHome()" icon-start>
+            <ion-icon name="home">  </ion-icon>  HOME
+          </button>
+        </ion-col>
+        <ion-col col-1>
+
+        </ion-col>
+        <ion-col col-auto>
+          <button ion-button round icon-start color="secondary" (click)="openModal()">
+            <ion-icon name="map">  </ion-icon> แผนที่
+          </button>
+        </ion-col>
+        <ion-col col-auto>
+          <button ion-button round icon-start color="secondary" (click)="Convert()">
+            <ion-icon name="list-box">  </ion-icon> มาตรา
+          </button>
+        </ion-col>
+        <ion-col col-auto>
+          <button ion-button round icon-start color="danger">
+            <ion-icon name="pause">  </ion-icon> หยุดชั่วคราว
+          </button>
+        </ion-col>
+        <ion-col col-auto>
+          <button ion-button round icon-start color="secondary">
+            <ion-icon name="checkmark">  </ion-icon> บันทึก1
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
+<!--ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="sn1">
+      <ion-segment-button value="page1">
+        Puppies
+      </ion-segment-button>
+      <ion-segment-button value="kittens">
+        Kittens
+      </ion-segment-button>
+      <ion-segment-button value="ducklings">
+        Ducklings
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <ion-content>
+    <div [ngSwitch]="sn1">
+      <ion-list *ngSwitchCase="page1">
+        <ion-item>
+            <ion-thumbnail item-start>
+            </ion-thumbnail>
+             <h2>Ruby</h2>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-header-->
+
+<!--ion-content padding>
+  
+</ion-content-->
