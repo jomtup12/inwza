@@ -1,0 +1,45 @@
+<!-- Generated template for the Sn1Presec3Component component -->
+<ion-grid style="text-align: center">
+  <ion-row>
+    
+    <ion-col col-4>
+        
+      <ion-card (click)="presentPrompt()" color="light">
+        <ion-card-header>
+          {{buildingHead}}
+        </ion-card-header>
+        <div><ion-icon name="ios-home" class="ion-icon"></ion-icon></div>
+        <ion-card-content>
+           
+         {{buildingDetail}}
+        </ion-card-content>
+      </ion-card>
+    
+    
+    </ion-col>
+    <ion-col col-4>
+        <ion-card (click)="editBuilding()" color="secondary">
+            <ion-card-header>
+              {{buildingHead}}
+            </ion-card-header>
+            <div><ion-icon name="ios-home" class="ion-icon"></ion-icon></div>
+            <ion-card-content>
+               
+             {{buildingDetail}}
+            </ion-card-content>
+          </ion-card>
+      </ion-col>
+      <ion-col col-4>
+          <ion-card (click)="editBuilding()" color="highlight">
+              <ion-card-header>
+                {{buildingHead}}
+              </ion-card-header>
+              <div><ion-icon name="ios-home" class="ion-icon"></ion-icon></div>
+              <ion-card-content>
+                 
+               {{buildingDetail}}
+              </ion-card-content>
+            </ion-card>
+        </ion-col>
+  </ion-row>
+</ion-grid>
