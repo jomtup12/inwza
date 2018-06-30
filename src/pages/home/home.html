@@ -39,8 +39,19 @@
     </ion-item>
 
     <ion-toolbar color="primary">
-      สถานะของเขตพื้นที่จังหวัดขอนแก่น :
-      <ion-badge color="secondary">กำลังสำรวจ</ion-badge>
+     
+      <ion-badge >
+         <ion-item>
+        <ion-label>สถานะของเขตพื้นที่จังหวัดขอนแก่น : </ion-label>
+        <ion-select [(ngModel)]="status">
+          <ion-option value="01">กำลังสำรวจ</ion-option>
+          <ion-option value="02">สำรวจครบแล้ว</ion-option>
+          <ion-option value="03">ตรวจสอบแล้ว</ion-option>
+          <ion-option value="04" checked="true">อนุมัติแล้ว</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-badge>
+      
     </ion-toolbar>
 
     <div>
