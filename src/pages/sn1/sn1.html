@@ -28,21 +28,26 @@
   <ion-grid>
     <ion-row justify-content-center>
       <ion-col col-11>
-        <div  [ngSwitch]="sn1">
+        <div  [ngSwitch]="true">
           
-            <ion-list *ngSwitchCase="'page1'">
-              <sn1-sec1></sn1-sec1>
+            <ion-list *ngSwitchCase="sn1==='page1'">
+           
+            <sn1-sec1></sn1-sec1>
             </ion-list>
          
           
-            <ion-list *ngSwitchCase="'page2'">
+            <ion-list *ngSwitchCase="sn1==='page2'">
               <sn1-sec2></sn1-sec2>
             </ion-list>
           
          
-            <ion-list *ngSwitchCase="'page3'">
-              <sn1-sec3></sn1-sec3>
+            <ion-list *ngSwitchCase="sn1==='page3' && isEditing==false">
+              <sn1-presec3></sn1-presec3>
             </ion-list>
+
+            <ion-list *ngSwitchCase="isEditing">
+                <sn1-sec3></sn1-sec3>
+              </ion-list>
          
         </div>
       </ion-col>

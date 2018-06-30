@@ -21,6 +21,7 @@ export class Sn1Page {
   isSec2Enable:boolean
   isSec3Enable:boolean
   stepCondition:boolean
+  isEditing: boolean
 
   musicAlertOpts: { title: string, subTitle: string };
 
@@ -29,6 +30,7 @@ export class Sn1Page {
     this.isSec1Enable =  true
     this.isSec2Enable =  false
     this.isSec3Enable =  false
+    this.isEditing = false
     this.events.subscribe("sec1Submitted",() => {
         this.sn1="page2"
         this.isSec2Enable = true;
@@ -38,6 +40,12 @@ export class Sn1Page {
       this.sn1="page3"
       this.isSec3Enable = true;
   })
+
+    this.events.subscribe("editBuildingSummit",() => {
+      this.isSec3Enable = true;
+      this.sn1="page3";
+      this.isEditing = true;
+    })
   }
   goHome(){
     this.navCtrl.setRoot(HomePage);
