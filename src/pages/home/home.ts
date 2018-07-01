@@ -39,4 +39,14 @@ export class HomePage {
     });
     loader.present();
   }
+  noteModal(){
+    const notemodal = this.modal.create('NotemodalPage');
+  
+    notemodal.present();
+    }
+  detailModal(){
+    const detailmodal = this.modal.create('DetailmodalPage');
+    
+    detailmodal.present();
+      }
 }
