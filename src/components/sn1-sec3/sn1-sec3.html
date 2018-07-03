@@ -1,11 +1,12 @@
 
+    <button ion-button (click)="backtoMain()">กลับสู่หน้าหลัก</button>
     <p><button ion-button  round outline style="font-size: 23px">ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)</button></p>
     <ion-item style="margin-left:15px">
-      <ion-input placeholder="ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)" ></ion-input>
+      <ion-input placeholder="ลำดับครัวเรือนสถานประกอบการในบ้าน/อาคาร/สิ่งปลูกสร้าง(ยูนิต)"[(ngModel)]="sn1_sub.A1" ></ion-input>
     </ion-item>
     <p><button ion-button  round outline>กรุณาเลือกผลการเข้าพบ </button></p>
     <ion-item>         
-      <ion-select [(ngModel)]="os2" interface="popover" placeholder="กรุณาเลือกการเข้าพบ" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black;margin-left:15px">
+      <ion-select [(ngModel)]="sn1_sub.H5_1" interface="popover" placeholder="กรุณาเลือกการเข้าพบ" interface="action-sheet" cancelText="ยกเลิก" style="background-color:whitesmoke;color: black;margin-left:15px">
           <ion-option [value]=1>1.มีผู้ให้ข้อมูลให้ความร่วมมือ</ion-option>
           <ion-option [value]=2>2.มีผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ</ion-option>
           <ion-option [value]=3>3.ไม่มี/ไม่พบผู้ให้ข้อมูล</ion-option>
@@ -15,7 +16,7 @@
     <p><button ion-button  round outline>การแยกมิเตอร์น้ำประปา/น้ำบาดาล</button></p>
     <ion-grid style="margin-left:25px">
     <h4>  1.ใช้น้ำประปาหรือไม่</h4>
-    <ion-row radio-group >
+    <ion-row radio-group [(ngModel)="sn1_sub.P1"]>
       <ion-col>
         <ion-item>
           <ion-radio item-left [value]=true></ion-radio>
@@ -30,7 +31,7 @@
       </ion-col>
     </ion-row>
       <h4>    2.มีมิเตอร์น้ำประปาแยกออกจากส่วนกลางหรือไม่</h4>
-      <ion-row radio-group >
+      <ion-row radio-group  [(ngModel)="sn1_sub.P2"] >
         <ion-col>
           <ion-item>
             <ion-radio item-left [value]=true></ion-radio>
@@ -45,7 +46,7 @@
         </ion-col>
       </ion-row>
       <h4>    3.ใช้น้ำบาดาลหรือไม่</h4>
-      <ion-row radio-group >
+      <ion-row radio-group  [(ngModel)="sn1_sub.P3"]>
         <ion-col>
           <ion-item>
             <ion-radio item-left [value]=true></ion-radio>
@@ -60,7 +61,7 @@
         </ion-col>
       </ion-row>
       <h4>    4.มีมิเตอร์น้ำบาดาลแยกออกจากส่วนกลางหรือไม่</h4>
-      <ion-row radio-group >
+      <ion-row radio-group  [(ngModel)="sn1_sub.P4"]>
         <ion-col>
           <ion-item>
             <ion-radio item-left [value]=true></ion-radio>
@@ -78,7 +79,7 @@
     <p><button ion-button  round outline>กิจกรรมการใช้น้ำ</button></p>
     <ion-grid style="margin-left:25px">
     <h4>  1.เพื่อการอุปโภคบริโภค:สถานที่นี้มีผู้อาศัยติดต่อกันนานเกิน 3 เดือนใช่หรือไม่</h4>
-    <ion-row radio-group >
+    <ion-row radio-group  [(ngModel)="sn1_sub.G1"] >
       <ion-col>
         <ion-item>
           <ion-radio item-left [value]=true></ion-radio>
