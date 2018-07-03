@@ -2,25 +2,25 @@
   <button ion-button round outline>ชื่อถนน/ลำน้ำ/ละแวกบ้าน</button>
 
   <ion-item >
-    <ion-input type="text" placeholder="ชื่อถนน/ลำน้ำ/ละแวกบ้าน"></ion-input>
+    <ion-input type="text" placeholder="ชื่อถนน/ลำน้ำ/ละแวกบ้าน" [(ngModel)]="sn1.A2"></ion-input>
   </ion-item>
   <p>
     <button ion-button round outline>ชื่อตรอก/ซอย</button>
   </p>
   <ion-item >
-    <ion-input placeholder="ชื่อตรอก/ซอย" style="background-color:whitesmoke;color: black"></ion-input>
+    <ion-input placeholder="ชื่อตรอก/ซอย" style="background-color:whitesmoke;color: black" [(ngModel)]="sn1.A3"></ion-input>
   </ion-item>
   <p>
     <button ion-button round outline style="font-size: 23px">ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่นๆ</button>
   </p>
   <ion-item >
-    <ion-input placeholder="ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่น"></ion-input>
+    <ion-input placeholder="ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่น" [(ngModel)]="sn1.A4"></ion-input>
   </ion-item>
   <p>
     <button ion-button round outline>เลขที่บ้าน/อาคาร</button>
   </p>
   <ion-item >
-    <ion-input placeholder="เลขที่บ้าน/อาคาร"></ion-input>
+    <ion-input placeholder="เลขที่บ้าน/อาคาร" [(ngModel)]="sn1.A5"></ion-input>
   </ion-item>
   <br>
   <button ion-button round outline style="font-size: 23px" (click)="loadMap()">ตำแหน่งปัจจุบัน</button>
@@ -30,7 +30,7 @@
     <button ion-button round style="font-size: 20px" outline>ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง</button>
   </p>
   <ion-item>
-    <ion-select [(ngModel)]="os1" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก"
+    <ion-select [(ngModel)]="sn1.A8" interface="popover" placeholder="กรุณาเลือกประเภท" interface="action-sheet" cancelText="ยกเลิก"
       style="background-color:whitesmoke;color: black;">
       <ion-option value='1'>1.บ้านเดี่ยว</ion-option>
       <ion-option value='2'>2.บ้านแฝด/ทาวน์เฮ้าส์</ion-option>
