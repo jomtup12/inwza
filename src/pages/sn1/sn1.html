@@ -6,7 +6,7 @@
     </ion-title>
   </ion-navbar>
   <ion-toolbar no-border-top color="primary">
-    <ion-segment [(ngModel)]="sn1">
+    <ion-segment [(ngModel)]="currentPage">
       <ion-segment-button value="page1">
         หน้าที่ 1
       </ion-segment-button>
@@ -30,23 +30,23 @@
       <ion-col col-11>
         <div  [ngSwitch]="true">
           
-            <ion-list *ngSwitchCase="sn1==='page1'">
+            <ion-list *ngSwitchCase="currentPage==='page1'">
            
-            <sn1-sec1></sn1-sec1>
+            <sn1-sec1 [(sn1)]="sn1"></sn1-sec1>
             </ion-list>
          
           
-            <ion-list *ngSwitchCase="sn1==='page2'">
-              <sn1-sec2></sn1-sec2>
+            <ion-list *ngSwitchCase="currentPage==='page2'">
+              <sn1-sec2 [(sn1)]="sn1"></sn1-sec2>
             </ion-list>
           
          
-            <ion-list *ngSwitchCase="sn1==='page3' && isEditing==false">
-              <sn1-presec3></sn1-presec3>
+            <ion-list *ngSwitchCase="currentPage==='page3' && isEditing==false">
+              <sn1-presec3 [(sn1)]="sn1"></sn1-presec3>
             </ion-list>
 
-            <ion-list *ngSwitchCase="isEditing">
-                <sn1-sec3></sn1-sec3>
+            <ion-list *ngSwitchCase="currentPage==='page3' &&   isEditing">
+                <sn1-sec3 [(sn1_sub)]="sn1_sub"></sn1-sec3>
               </ion-list>
          
         </div>
