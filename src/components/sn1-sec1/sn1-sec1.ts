@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { Events } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { AlertController } from 'ionic-angular';
-
+import { sn1 } from '../../models/SN1/sn1';
 /**
  * Generated class for the Sn1Sec1Component component.
  *
@@ -14,7 +14,9 @@ import { AlertController } from 'ionic-angular';
   templateUrl: 'sn1-sec1.html'
 })
 export class Sn1Sec1Component {
-  a :any;
+
+  @Input() sn1:sn1;
+
   text: string;
   lat: any;
   lon: any;
@@ -27,7 +29,7 @@ export class Sn1Sec1Component {
   }
 
   submit(){
-    this.events.publish("sec1Submitted");
+    this.events.publish("sec1Submitted",this.sn1);
 
   }
 
