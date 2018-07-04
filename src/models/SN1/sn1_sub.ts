@@ -5,7 +5,7 @@ A1: number;
     H4_0:boolean;
     status:number;
     status_approve:number;
-    H5_1:number;
+    H5_1?:number;
     H5_2?:number;
     H5_3?:number;
     G1?:boolean;
@@ -18,12 +18,16 @@ A1: number;
     P4?: number;
     mergeTapWater?:boolean;
     mergeGroundWater?:boolean;
+    isHasA11?:boolean;
     A11?:string;
+    isView:boolean;
 
-    constructor() { 
+    constructor() {
+        this.status = 0; 
         this.H3 = 1;
+        this.H4 = '';
         this.A1 = 200;
-        this.status = 0;
+        this.H5_1 = null;
         this.G1 = null;
         this.G2 = null;
         this.G3 = null;
@@ -34,6 +38,9 @@ A1: number;
         this.P4 = null;
         this.mergeTapWater=false;
         this.mergeGroundWater=false;
+        this.isHasA11 = false;
+        this.A11 = '';
+        this.isView = false;
     
     }
 }

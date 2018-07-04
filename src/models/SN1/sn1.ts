@@ -24,6 +24,7 @@ export class sn1 {
     N1?: number;
     A11?: string;
     H3?:sn1_sub[];
+    currentSubRoom:number;
 
     constructor() { }
 }
