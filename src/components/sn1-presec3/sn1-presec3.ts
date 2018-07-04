@@ -86,6 +86,15 @@ export class Sn1Presec3Component  {
   }
 
   delFamily(){
+    if(this.sn1.H3[this.sn1.H3.length-1].isView){
+      this.sn1.currentSubRoom-=1;
+    }
+    this.sn1.H3.pop();
+    this.ngOnInit();
+
+  }
+  
+  delFamilyFromButton(){
     this.sn1.N-=1;
     if(this.sn1.H3[this.sn1.H3.length-1].isView){
       this.sn1.currentSubRoom-=1;
