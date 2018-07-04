@@ -35,6 +35,7 @@ export class Sn1Page {
       N: null,
       A11: '',
       H3: null,
+      currentSubRoom: 0,
 
   };
 
@@ -85,7 +86,7 @@ export class Sn1Page {
         this.currentPage="page3"
       this.isSec3Enable = true;
       this.isEditing = false;
-
+  
       console.log(this.sn1.H3);
     })
   }
