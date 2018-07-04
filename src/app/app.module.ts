@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { FormsModule } from '@angular/forms'
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { ComponentsModule } from '../components/components.module';
@@ -19,6 +20,7 @@ import { Sn1Page } from '../pages/sn1/sn1';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     ComponentsModule,
+    FormsModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

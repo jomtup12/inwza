@@ -1,20 +1,42 @@
 <!-- Generated template for the Sn1Presec3Component component -->
 <ion-grid style="text-align: center">
-  <ion-row >
-    <ion-col  *ngFor="let room of sn1.H3; let i= index" col-4>
-        
-      <ion-card (click)="editBuilding(i)" color="light">
+  <ion-row>
+    <ion-col col-2>
+      <button ion-button color="secondary" block (click)="sn1.currentSubRoom == sn1.N ? addExtraFamily() : editBuilding(sn1.currentSubRoom)"> เริ่มสำรวจ</button>
+    </ion-col>
+    <ion-col col-2>
+      <button ion-button color="danger" (click)="delFamily()" block> ลบครัวเรือน</button>
+    </ion-col>
+    <ion-col col-8>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col *ngFor="let room of sn1.H3; let i= index" col-4>
+
+      <ion-card (click)="room.status==0 ? null : editBuilding(i) " [color]="getCardColor(room.status)" >
         <ion-card-header>
           ครัวเรือนที่ {{i+1}}
         </ion-card-header>
-        <div><ion-icon name="ios-home" class="ion-icon"></ion-icon></div>
+        <div>
+          <ion-icon name="ios-home" class="ion-icon"></ion-icon>
+        </div>
         <ion-card-content>
-           
-         {{buildingDetail}}
+          <div>
+          {{room.H4=='' ? 'ยังไม่กรอกข้อมูลเลขที่/หมายเลขห้อง' : room.H4}} 
+        </div>
+        <div>
+            {{room.H5_1==null ? 'ยังไม่กรอกข้อมูลการเข้าพบ' : 
+            room.H5_1==1 ? 'มีผู้ให้ข้อมูลให้ความร่วมมือ' :
+            room.H5_1==2 ? 'มีผู้ให้ข้อมูล แต่ไม่ให้ความร่วมมือ' :
+            room.H5_1==3 ? 'ไม่มี/ไม่พบผู้ให้ข้อมูล' :
+            'บ้าน/อาคาร ว่างหรือร้าง'
+          }} 
+          </div>
         </ion-card-content>
+        
       </ion-card>
-    
+
     </ion-col>
-    
+
   </ion-row>
 </ion-grid>
