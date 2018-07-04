@@ -15,11 +15,18 @@ import { Sn1Page } from '../sn1/sn1';
   templateUrl: 'home.html',
 })
 export class HomePage {
-
+  n:any
   constructor(public navCtrl: NavController, public navParams: NavParams,public menu : MenuController,private modal: ModalController,public loadingCtrl: LoadingController) {
     menu.enable(true);
+    this.n = 15;
+    
   }
-  
+  public buttonClicked: boolean = false; //Whatever you want to initialise it as
+
+    public onButtonClick() {
+
+        this.buttonClicked = !this.buttonClicked;
+    }
     
   generateSN1(){
     this.navCtrl.push(Sn1Page);
