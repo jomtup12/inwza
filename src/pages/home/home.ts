@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {IonicPage, NavController, NavParams, MenuController,ModalController,LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, ModalController, LoadingController } from 'ionic-angular';
 import { Sn1Page } from '../sn1/sn1';
 
 /**
@@ -15,27 +15,31 @@ import { Sn1Page } from '../sn1/sn1';
   templateUrl: 'home.html',
 })
 export class HomePage {
-  n:any
-  constructor(public navCtrl: NavController, public navParams: NavParams,public menu : MenuController,private modal: ModalController,public loadingCtrl: LoadingController) {
+  n: any
+  a: any
+  isFix: boolean
+  buttonClicked: boolean = false;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menu: MenuController, private modal: ModalController, public loadingCtrl: LoadingController) {
     menu.enable(true);
-    this.n = 15;
-    
+    this.n = 2;
+    this.a = 1;
+    this.isFix = true;
+
+
   }
-  public buttonClicked: boolean = false; //Whatever you want to initialise it as
+  onButtonClick() {
 
-    public onButtonClick() {
+    this.buttonClicked = !this.buttonClicked;
+  }
 
-        this.buttonClicked = !this.buttonClicked;
-    }
-    
-  generateSN1(){
+  generateSN1() {
     this.navCtrl.push(Sn1Page);
   }
-  openModal(){
+  openModal() {
     const myModal = this.modal.create('ModalPage');
-  
+
     myModal.present();
-    }
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
@@ -46,14 +50,14 @@ export class HomePage {
     });
     loader.present();
   }
-  noteModal(){
+  noteModal() {
     const notemodal = this.modal.create('NotemodalPage');
-  
+
     notemodal.present();
-    }
-  detailModal(){
+  }
+  detailModal() {
     const detailmodal = this.modal.create('DetailmodalPage');
-    
+
     detailmodal.present();
-      }
+  }
 }

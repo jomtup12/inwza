@@ -88,7 +88,7 @@
   
   <ion-content padding>
     <div style="text-align:center;">
-      <button ion-button round style="font-weight:bold;background-color:primary;font-size:20px;" (click)="onButtonClick()">FS ให้แก้ไข้</button>
+      <button ion-button round style="font-weight:bold;background-color:primary;font-size:20px;" (click)="onButtonClick()" *ngIf="isFix">FS ให้แก้ไข้</button>
     </div>
     <div *ngIf="buttonClicked">
     <div>
@@ -97,7 +97,7 @@
     <div>
       <label left style="font-weight:bold;font-size:20px;color: red">รายการที่ต้องแก้ไข</label>
     </div>
-    <ion-grid style="text-align:center;">
+    <ion-grid style="text-align:center;border: ridge;">
       <ion-row style="font-weight:bold;background-color:#f9fff5;font-size:20px;">
         <ion-col>
           ลำดับที่
@@ -141,11 +141,37 @@
           <ion-badge (click)="detailModal()">ดูครัวเรือน</ion-badge>
         </ion-col>
       </ion-row>
+      <ion-row>
+          <ion-col>
+            1
+          </ion-col>
+          <ion-col>
+            118/2
+          </ion-col>
+          <ion-col>
+            โนนม่วง
+          </ion-col>
+          <ion-col>
+            30
+          </ion-col>
+          <ion-col>
+            -
+          </ion-col>
+          <ion-col>
+            <ion-badge color="secondary">แก้ไข</ion-badge> /
+            <ion-badge color="danger">ลบ</ion-badge> /
+            <ion-badge (click)="noteModal()">โน๊ต</ion-badge>/
+            <ion-badge (click)="detailModal()">ดูครัวเรือน</ion-badge>
+          </ion-col>
+        </ion-row>
     </ion-grid>
+    <div>
+        <label left style="font-weight:bold;font-size:20px;">คุณมี {{a}} รายการที่แก้ไขแล้ว</label>
+      </div>
     <div>
       <label left style="font-weight:bold;font-size:20px;color: green">รายการที่แก้ไขแล้ว</label>
     </div>
-    <ion-grid style="text-align:center;">
+    <ion-grid style="text-align:center;border: ridge;">
       <ion-row style="font-weight:bold;background-color:#f9fff5;font-size:20px;">
         <ion-col>
           ลำดับที่
@@ -190,8 +216,12 @@
         </ion-col>
       </ion-row>
     </ion-grid>
+    <div style="text-align: center;font-weight: bold;font-size: 20px;margin: 20px;">
+      ข้อมูลบ้านที่สำรวจแล้วจ้า
+    </div>
   </div>
-    <ion-grid style="text-align:center;">
+
+    <ion-grid style="text-align:center;border: solid">
   
       <ion-row style="font-weight:bold;background-color:#f9fff5;font-size:20px;">
         <ion-col>
@@ -236,6 +266,29 @@
           <ion-badge (click)="detailModal()">ดูครัวเรือน</ion-badge>
         </ion-col>
       </ion-row>
+      <ion-row>
+          <ion-col>
+            1
+          </ion-col>
+          <ion-col>
+            118/2
+          </ion-col>
+          <ion-col>
+            โนนม่วง
+          </ion-col>
+          <ion-col>
+            30
+          </ion-col>
+          <ion-col>
+            -
+          </ion-col>
+          <ion-col>
+            <ion-badge color="secondary">แก้ไข</ion-badge> /
+            <ion-badge color="danger">ลบ</ion-badge> /
+            <ion-badge (click)="noteModal()">โน๊ต</ion-badge>/
+            <ion-badge (click)="detailModal()">ดูครัวเรือน</ion-badge>
+          </ion-col>
+        </ion-row>
   
   
     </ion-grid>
