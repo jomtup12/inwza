@@ -1,8 +1,9 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input, ViewChild,OnInit } from '@angular/core';
 import { Events } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { AlertController } from 'ionic-angular';
 import { sn1 } from '../../models/SN1/sn1';
+import {NgForm} from '@angular/forms';
 /**
  * Generated class for the Sn1Sec1Component component.
  *
@@ -13,8 +14,8 @@ import { sn1 } from '../../models/SN1/sn1';
   selector: 'sn1-sec1',
   templateUrl: 'sn1-sec1.html'
 })
-export class Sn1Sec1Component {
-
+export class Sn1Sec1Component  {
+  @ViewChild('f') sec1Form:NgForm ;
   @Input() sn1:sn1;
 
   text: string;
@@ -28,11 +29,14 @@ export class Sn1Sec1Component {
     this.lat = "-";
   }
 
+  
+
   submit(){
+    console.log(this.sec1Form.valid);
     this.events.publish("sec1Submitted",this.sn1);
-
+    
   }
-
+  
   loadMap()
   {
     let geoOption = {enableHighAccuracy : true};
