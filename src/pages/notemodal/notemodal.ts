@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IonicPage, NavController, NavParams,Events } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,Events, ViewController } from 'ionic-angular';
 import { NgModule } from '@angular/core';
 /**
  * Generated class for the NotemodalPage page.
@@ -18,11 +18,13 @@ export class NotemodalPage {
 d = 'ไม่พบผู้อยู่อาศัย';
 d2 = 'ไม่พบผู้อยู่อาศัย';
 d3 = 'ไม่มีปัญหาเเล้วจ้า';
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private view:ViewController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NotemodalPage');
   }
-
+  closemodal() {
+    this.view.dismiss(); 
+}
 }
