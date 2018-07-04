@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Component, Input } from '@angular/core';
+import { IonicPage, NavController, NavParams,Events } from 'ionic-angular';
+import { NgModule } from '@angular/core';
 /**
  * Generated class for the NotemodalPage page.
  *
@@ -14,7 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'notemodal.html',
 })
 export class NotemodalPage {
-
+  @Input()
+d = 'ไม่พบผู้อยู่อาศัย';
+d2 = 'ไม่พบผู้อยู่อาศัย';
+d3 = 'ไม่มีปัญหาเเล้วจ้า';
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
