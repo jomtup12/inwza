@@ -17,7 +17,7 @@ export class NotemodalPage {
   @Input()
 d = 'ไม่พบผู้อยู่อาศัย';
 d2 = 'ไม่พบผู้อยู่อาศัย';
-d3 = 'ไม่มีปัญหาเเล้วจ้า';
+d3 = '-';
   constructor(public navCtrl: NavController, public navParams: NavParams,private view:ViewController) {
   }
 
