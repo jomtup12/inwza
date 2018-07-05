@@ -4,7 +4,7 @@ import {sn1_sub} from '../SN1/sn1_sub'
 export class sn1 {
     status:number;
     A1: number;
-    A2: string;
+    A2?: string;
     A3: string;
     A4: string;
     A5: string;
@@ -26,5 +26,29 @@ export class sn1 {
     H3?:sn1_sub[];
     currentSubRoom:number;
 
-    constructor() { }
+    constructor() {
+    this.status = 0;
+    this.A1 = null;
+    this.H1_4 = null;
+    this.A2 = '';
+    this.A3 = '';
+    this.A4 = '';
+    this.A5 = '';
+    this.A7 = 0;
+    this.A6 = 0;
+    this.A8 = '';
+    this.A8_1 = null;
+    this.H1_1 = null;
+    this.H1_2 = null;
+    this.H1_3 = null;
+    this.N1 = null;
+    this.N0 = null;
+    this.A9 = null;
+    this.A10 = null;
+    this.N = null;
+    this.A11 = '';
+    this.H3 = null;
+    this.currentSubRoom = 0;
+
+     }
 }

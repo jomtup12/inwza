@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, Events,ModalController} from 'ionic-angular';
+import { NavController, Events,ModalController,NavParams} from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { sn1 } from '../../models/SN1/sn1';
 import { sn1_sub } from '../../models/SN1/sn1_sub';
@@ -12,33 +12,7 @@ import { sn1_sub } from '../../models/SN1/sn1_sub';
 })
 export class Sn1Page {
 
-  sn1: sn1 ={
- 
-      status: 0,
-      A1: null,
-      H1_4: null,
-      A2: null,
-      A3: '',
-      A4: '',
-      A5: '',
-      A7: 0,
-      A6: 0,
-      A8: '',
-      A8_1: null,
-      H1_1: null,
-      H1_2: null,
-      H1_3: null,
-      N1: null,
-      N0: null,
-      A9: null,
-      A10: null,
-      N: null,
-      A11: '',
-      H3: null,
-      currentSubRoom: 0,
-
-  };
-
+  sn1: sn1 
   sn1_sub:sn1_sub
   currentPage: string = "page1";
   isSec1Enable:boolean
@@ -49,8 +23,9 @@ export class Sn1Page {
 
   musicAlertOpts: { title: string, subTitle: string };
 
-  constructor(public navCtrl: NavController, private events:Events,private modal: ModalController) {
-
+  constructor(public navCtrl: NavController, private events:Events,private modal: ModalController,private navParams: NavParams) {
+    this.sn1 = new sn1();
+    this.sn1 = this.navParams.get('sn1');
     this.sn1_sub = new sn1_sub();
     this.isSec1Enable =  true
     this.isSec2Enable =  false
