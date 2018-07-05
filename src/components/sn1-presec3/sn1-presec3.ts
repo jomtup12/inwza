@@ -81,7 +81,7 @@ export class Sn1Presec3Component  {
   }
   addFamily(i:number){
     const SN1_sub = new sn1_sub();
-    SN1_sub.H3 = i+1;
+    SN1_sub.H3 = this.sn1.H3.length+1;
     this.sn1.H3.push(SN1_sub);
   }
 
