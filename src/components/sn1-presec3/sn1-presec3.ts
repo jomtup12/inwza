@@ -90,7 +90,7 @@ export class Sn1Presec3Component  {
       this.sn1.currentSubRoom-=1;
     }
     this.sn1.H3.pop();
-    this.ngOnInit();
+    //this.ngOnInit();
 
   }
   
