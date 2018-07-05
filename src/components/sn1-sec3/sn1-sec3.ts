@@ -28,7 +28,6 @@ export class Sn1Sec3Component {
   }
 
   resetData(){
-    this.sn1_sub.status = 0; 
         this.sn1_sub.H3 = 1;
         this.sn1_sub.H4 = '';
         this.sn1_sub.A1 = 200;
@@ -45,7 +44,6 @@ export class Sn1Sec3Component {
         this.sn1_sub.mergeGroundWater=false;
         this.sn1_sub.isHasA11 = false;
         this.sn1_sub.A11 = '';
-        this.sn1_sub.isView = false;
         this.isReset = true;
         this.backtoMain()
   }
