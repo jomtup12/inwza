@@ -13,7 +13,7 @@ import { sn1_sub } from '../../models/SN1/sn1_sub';
 })
 export class Sn1Sec3Component {
   @Input() sn1_sub: sn1_sub;
-  text: string;
+  text: string
   stepCondition: boolean
   isShow: boolean
   step: number
