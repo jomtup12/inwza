@@ -88,7 +88,7 @@
   
   <ion-content padding>
     <div style="text-align:center;">
-      <button ion-button round style="font-weight:bold;background-color:primary;font-size:20px;" (click)="onButtonClick()" *ngIf="isFix">FS ให้แก้ไข้</button>
+      <button ion-button round style="font-weight:bold;background-color:primary;font-size:20px;" (click)="onButtonClick()" *ngIf="isFix">FS ให้แก้ไข</button>
     </div>
     <div *ngIf="buttonClicked">
     <div>
@@ -243,52 +243,30 @@
           แก้ไข / ลบ
         </ion-col>
       </ion-row>
-      <ion-row>
+      <ion-row *ngFor="let building of SN1; let i = index">
         <ion-col>
-          1
+          {{i+1}}
         </ion-col>
         <ion-col>
-          118/2
+          {{building.A5}}
         </ion-col>
         <ion-col>
-          โนนม่วง
+          {{building.A4}}
         </ion-col>
         <ion-col>
-          30
+          {{building.H3==null ? '0' : building.H3.length}}
         </ion-col>
         <ion-col>
           -
         </ion-col>
         <ion-col>
-          <ion-badge color="secondary">แก้ไข</ion-badge> /
+          <ion-badge (click)="editBuilding(i)"color="secondary">แก้ไข</ion-badge> /
           <ion-badge color="danger">ลบ</ion-badge> /
           <ion-badge (click)="noteModal()">โน๊ต</ion-badge>/
           <ion-badge (click)="detailModal()">ดูครัวเรือน</ion-badge>
         </ion-col>
       </ion-row>
-      <ion-row>
-          <ion-col>
-            1
-          </ion-col>
-          <ion-col>
-            118/2
-          </ion-col>
-          <ion-col>
-            โนนม่วง
-          </ion-col>
-          <ion-col>
-            30
-          </ion-col>
-          <ion-col>
-            -
-          </ion-col>
-          <ion-col>
-            <ion-badge color="secondary">แก้ไข</ion-badge> /
-            <ion-badge color="danger">ลบ</ion-badge> /
-            <ion-badge (click)="noteModal()">โน๊ต</ion-badge>/
-            <ion-badge (click)="detailModal()">ดูครัวเรือน</ion-badge>
-          </ion-col>
-        </ion-row>
+      
   
   
     </ion-grid>
