@@ -1,6 +1,6 @@
 <form (ngSubmit)="submit()" #f="ngForm">
-<button ion-button round outline>
-  ชื่อถนน/ลำน้ำ/ละแวกบ้าน</button>
+<label ion-button round outline>
+  ชื่อถนน/ลำน้ำ/ละแวกบ้าน</label>
 
 <ion-item>
   <ion-input
@@ -13,7 +13,7 @@
   required > </ion-input>
 </ion-item>
 <p>
-  <button ion-button round outline>ชื่อตรอก/ซอย</button>
+  <label ion-button round outline>ชื่อตรอก/ซอย</label>
 </p>
 <ion-item>
   <ion-input 
@@ -25,7 +25,7 @@
   required ></ion-input>
 </ion-item>
 <p>
-  <button ion-button round outline style="font-size: 23px">ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่นๆ</button>
+  <label ion-button round outline style="font-size: 23px">ชื่อหมู่บ้าน/คอนโด/อาคาร/สำนักงาน/สถานประกอบการ/สถาบัน/อื่นๆ</label>
 </p>
 <ion-item>
   <ion-input 
@@ -36,7 +36,7 @@
   required ></ion-input>
 </ion-item>
 <p>
-  <button ion-button round outline>เลขที่บ้าน/อาคาร</button>
+  <label ion-button round outline>เลขที่บ้าน/อาคาร</label>
 </p>
 <ion-item>
   <ion-input 
@@ -47,11 +47,11 @@
   required></ion-input>
 </ion-item>
 <br>
-<button ion-button round outline style="font-size: 23px" (click)="loadMap()">ตำแหน่งปัจจุบัน</button>
+<label ion-button round outline style="font-size: 23px" (click)="loadMap()">ตำแหน่งปัจจุบัน</label>
 
 <p>latitude: {{lat}} longitude: {{lon}}</p>
 <p>
-  <button ion-button round style="font-size: 20px" outline>ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง</button>
+  <label ion-button round style="font-size: 20px" outline>ประเภทบ้าน/อาคาร/สิ่งปลูกสร้าง</label>
 </p>
 <ion-item>
   <ion-select
@@ -85,7 +85,7 @@
 
 
 <p>
-  <button ion-button round outline>กรุณาเลือกผลการเข้าพบ </button>
+  <label ion-button round outline>กรุณาเลือกผลการเข้าพบ </label>
 </p>
 <ion-item>
   <ion-select  
@@ -105,7 +105,7 @@
   </ion-select>
 </ion-item>
 <p>
-  <button ion-button round style="font-size: 20px" outline (click)="presentProblem()">ให้ขันทึกข้อความเกี่ยวกับ ปัญหา/อุปสรรค/การนัดหมาย/เหตุผล ที่นับจดไม่ได้</button>
+  <label ion-button round style="font-size: 20px" outline (click)="presentProblem()">ให้ขันทึกข้อความเกี่ยวกับ ปัญหา/อุปสรรค/การนัดหมาย/เหตุผล ที่นับจดไม่ได้</label>
 </p>
 <br>
 <br>
