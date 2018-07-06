@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Events } from 'ionic-angular';
 import { sn1_sub } from '../../models/SN1/sn1_sub';
 /**

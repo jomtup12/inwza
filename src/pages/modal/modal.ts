@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,ViewController,ModalController } from 'ionic-angular';
+import { IonicPage,ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the ModalPage page.
@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams,ViewController,ModalController } fr
 })
 export class ModalPage {
 
-  constructor(private  navParams: NavParams,public view: ViewController) {
+  constructor(public view: ViewController) {
   }
 
   closeModal(){

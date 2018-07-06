@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,ViewController,ModalController } from 'ionic-angular';
+import { IonicPage, NavParams,ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the ConvertModalPage page.

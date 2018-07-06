@@ -1,4 +1,4 @@
-import { Component,Input, ViewChild,OnInit } from '@angular/core';
+import { Component,Input, ViewChild } from '@angular/core';
 import { Events } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import { AlertController } from 'ionic-angular';
